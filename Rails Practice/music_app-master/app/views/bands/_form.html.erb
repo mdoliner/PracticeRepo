@@ -1,0 +1,17 @@
+<%= display_errors(@band) %>
+<% @band.persisted? ? action = band_url(@band) : action = bands_url %>
+<% @band.persisted? ? method = :put : :post %>
+<% @band.persisted? ? submit_text = "Update Band" : submit_text = "Add Band" %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+
+  <%= add_auth_token %>
+
+  <label for="name">Name</label>
+  <input type="text" name="band[name]" value="<%= @band.name %>">
+  <br>
+
+  <input type="submit" value="<%= submit_text %>">
+
+</form>

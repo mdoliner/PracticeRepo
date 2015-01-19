@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NinetyNineCats</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= current_user ? current_user.user_name : "Sign in, you idiot." %>
+<% if current_user %>
+  <% user_session_tokens.each do |token| %>
+    <h4> You are currently logged in on: <%= token.environment %> </h4>
+    <%= button_to "Log Out.", action="session/logout/#{token.id}" %>
+  <% end %>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

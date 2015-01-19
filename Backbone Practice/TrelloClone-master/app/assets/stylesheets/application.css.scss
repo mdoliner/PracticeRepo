@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.all
+ *= require_tree .
+ */
+
+@import "bootstrap";
+@import "font-awesome";
+
+a, li, ul {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav.navbar.navbar-default {
+  background: RGB(12, 99, 149);
+  border: none;
+
+}
+
+.navbar-header a.navbar-brand {
+  color: RGB(133, 177, 202);
+}
+
+body {
+  background: RGB(14, 116, 175);
+}
+
+h3.board-title {
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+li.list:first-child {
+  margin-left: 10px;
+}
+
+li.list {
+  float: left;
+  background: RGB(227, 227, 227);
+  border-radius: 6px;
+  width: 260px;
+  margin-right: 10px;
+}
+
+h5.list-title {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+li.card {
+  background: RGB(255, 255, 255);
+  width: 245px;
+  margin-left: 7px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  padding: 5px;
+  box-shadow: 2px RGB(204, 204, 204);
+}

@@ -1,0 +1,12 @@
+<ul class="errors">
+
+</ul>
+<form>
+  <label for="title">Title</label>
+  <input id="title" type="text" name="feed[title]" value="<%= feed.escape("title") %>">
+
+  <label for="url">YOUAREEL</label>
+  <input id="url" type="text" name="feed[url]" value="<%= feed.escape("url") %>">
+
+  <button class="new-feed" type="submit">Create Feed</button>
+</form>

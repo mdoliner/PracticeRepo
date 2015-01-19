@@ -1,0 +1,47 @@
+def get_and_create_url(user)
+  puts "What URL would you like to shorten? "
+  long_url = gets.chomp
+  print "What type of URL is it? "
+  tag_topic = gets.chomp
+  unless TagTopic.exists?(topic: tag_topic)
+    raise "That topic doesn't exist!"
+  end
+  new_url = ShortenedUrl.create_for_user_and_long_url!(user, long_url)
+  Tagging.create_for_url_and_topic!(new_url, tag_topic)
+  puts "Congratulations! Your shortened URL is #{new_url.short_url}"
+end
+
+def get_and_visit_url(user)
+  puts "Enter a shortened URL."
+  short_url = gets.chomp
+  unless ShortenedUrl.exists?(short_url: short_url)
+    raise "That short URL doesn't exist!"
+  end
+  Launchy.open(ShortenedUrl.find_by_short_url(short_url).long_url)
+end
+
+begin
+  print "What is your email? "
+  user = User.find_by_email(gets.chomp)
+  raise "Not a valid email" if user.nil?
+rescue => e
+  puts e.message
+  retry
+end
+loop do
+  print "Would you like to create or visit a short url? (c/v) "
+  input = gets.chomp
+  begin
+    if input == "c"
+      get_and_create_url(user)
+    elsif input == "v"
+      get_and_visit_url(user)
+    elsif input == "q"
+      abort
+    else
+      puts "That is not a valid input."
+    end
+  rescue => e
+    puts e
+  end
+end

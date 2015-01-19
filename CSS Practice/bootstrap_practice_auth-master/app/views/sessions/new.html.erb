@@ -1,0 +1,25 @@
+<form action="/session" method="POST" role="form">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-1">
+      <h1>Log in!</h1>
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+      <div class="form-group">
+        <label for="user_username">Username</label>
+        <input type="text" class="form-control" name="user[username]" id="user_username">
+      </div>
+
+      <div class="form-group">
+        <label for="user_password">Password</label>
+        <input type="password" class="form-control" name="user[password]" id="user_password">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Log in!</button>
+    </div>
+  </div>
+</form>

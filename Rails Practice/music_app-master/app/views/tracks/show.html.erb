@@ -1,0 +1,10 @@
+<h1><%= @track.name %></h1>
+<p><%= ugly_lyrics(@track.lyrics) %></p>
+
+<%= button_to "Edit Track", edit_track_url(@track), method: :get %>
+<%= button_to "Delete Track", track_url(@track), method: :delete %><br>
+
+<%= render "notes/form" %>
+<%= render "notes/note" %>
+<br>
+<a href="<%= album_url(@track.album) %>">Back to Album</a><br>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>App Academy Friends</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/00-reset.css" type="text/css">
+  <link rel="stylesheet" href="css/01-header.css" type="text/css">
+  <link rel="stylesheet" href="css/02-notifications.css" type="text/css">
+  <link rel="stylesheet" href="css/03-layout.css" type="text/css">
+  <link rel="stylesheet" href="css/04-footer.css" type="text/css">
+  <link rel="stylesheet" href="css/05-cats.css" type="text/css">
+  <link rel="stylesheet" href="css/06-sidebar.css" type="text/css">
+  <link rel="stylesheet" href="css/07-online.css" type="text/css">
+  <link rel="stylesheet" href="css/08-thumbs.css" type="text/css">
+  <link rel="stylesheet" href="css/09-forms.css" type="text/css">
+  <link rel="stylesheet" href="css/10-posts.css" type="text/css">
+  <link rel="stylesheet" href="css/11-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/12-modal.css" type="text/css">
+</head>
+<body>
+
+  <header>
+    <nav class="group">
+      <h1 class="logo">App Academy Friends</h1>
+      <ul class="nav-elements">
+        <li class="nav-notifications">
+          <a href="#">Notifications
+            <small class="badge">3</small>
+          </a>
+          <ul class="notifications">
+            <li><a href="#">Constance likes your photo.</a></li>
+            <li><a href="#">Tommy left you a comment.</a></li>
+            <li><a href="#">Jonathan is now following you.</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content group">
+    <section class="content-header">
+      <h1 class="profile-name">Sennacy The Great</h1>
+      <button class="profile-add-friend"><i class="icon-small-friends"></i> Add Friend</button>
+    </section>
+    <section class="sidebar">
+      <section class="profile-picture">
+        <a href="#"><img src="../shared/img/cat.jpg"/><span class="online">ONLINE</span></a>
+      </section>
+      <section class="profile-info">
+        <strong>Sennacy</strong>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+      </section>
+      <section class="profile-nav">
+        <ul>
+          <li><a href="#"><i class="icon-small-wall"></i> Wall</a></li>
+          <li><a href="#"><i class="icon-small-about"></i> About</a></li>
+          <li><a href="#"><i class="icon-small-friends"></i> Friends</a></li>
+          <li><a href="#"><i class="icon-small-photos"></i> Photos</a></li>
+        </ul>
+      </section>
+      <section class="profile-friends">
+        <ul class="friends group">
+          <li><a href="#" class="thumb" title="Jonathan"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Constance"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Tommy"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Ed"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="CHUNGUR"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Carl"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Justin"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Chaim"><img src="../shared/img/cat.jpg"/></a></li>
+          <li><a href="#" class="thumb" title="Casey"><img src="../shared/img/cat.jpg"/></a></li>
+        </ul>
+      </section>
+    </section>
+    <section class="main">
+      <form class="group">
+        <a href="#" class="thumb" title="Sennacy"><img src="../shared/img/cat.jpg"/></a>
+        <fieldset>
+          <label for="Title">Post Title</label>
+          <input type="text" class="input" value="Lorem Ipsum Dolor Sit Amet" id="Title">
+          <label for="Body">Post Body</label>
+          <textarea rows="6" class="input" id="Body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+
+          <span class="submit">
+            <button type="submit">Post To Wall</button> or <a href="#">Cancel</a>
+          </span>
+        </fieldset>
+      </form>
+      <span class="post group">
+        <a href="#" class="thumb" title="Sennacy"><img src="../shared/img/cat.jpg"/></a>
+        <span class="content">
+          <h2>Hello World</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <ul class="post-info">
+            <li>Sennacy</li>
+            <li>3 hours ago</li>
+            <li>541 views</li>
+          </ul>
+          <ul class="options">
+            <li class="icon-comment">Comment</li>
+            <li class="icon-reblog">Reblog</li>
+            <li class="icon-favorite">Favorite</li>
+          </ul>
+        </span>
+      </span>
+      <span class="post group">
+        <a href="#" class="thumb" title="Sennacy"><img src="../shared/img/cat.jpg"/></a>
+        <span class="content">
+          <h2>Hello World</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <ul class="post-info">
+            <li>Sennacy</li>
+            <li>3 hours ago</li>
+            <li>541 views</li>
+          </ul>
+          <ul class="options">
+            <li class="icon-comment">Comment</li>
+            <li class="icon-reblog">Reblog</li>
+            <li class="icon-favorite">Favorite</li>
+          </ul>
+        </span>
+      </span>
+      <span class="post group">
+        <a href="#" class="thumb" title="Sennacy"><img src="../shared/img/cat.jpg"/></a>
+        <span class="content">
+          <h2>Hello World</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <ul class="post-info">
+            <li>Sennacy</li>
+            <li>3 hours ago</li>
+            <li>541 views</li>
+          </ul>
+          <ul class="options">
+            <li class="icon-comment">Comment</li>
+            <li class="icon-reblog">Reblog</li>
+            <li class="icon-favorite">Favorite</li>
+          </ul>
+        </span>
+      </span>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer group">
+      <small>&copy; 2014 App Academy. All rights reserved.</small>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <span class="modal is-open">
+    <section class="modal-screen">
+    </section>
+    <section class="modal-form">
+      <form>
+        <fieldset>
+          <h1>Welcome</h1>
+          <h2>Please sign in to continue.</h2>
+          <label for="Email">Email</label>
+          <input type="text" class="input" value="sennacy@appacademy.io" id="Email">
+          <label for="Password">Password</label>
+          <input type="password" value="password" id="Password" class="input">
+          <span class="submit">
+            <button type="submit">Sign In</button> or <a href="#">Cancel</a>
+          </span>
+          <i class="exit" class="js-modal-close">&times;</i>
+        </fieldset>
+      </form>
+    </section>
+  </span>
+
+  <script src="../shared/js/jquery.js"></script>
+  <script>
+    $(function(){
+
+      $("body").on("click", ".js-modal-open", function(event){
+        event.preventDefault();
+        $(".modal").addClass("is-open");
+      });
+
+      $("body").on("click", ".js-modal-close", function(event){
+        event.preventDefault();
+        $(".modal").removeClass("is-open");
+      });
+
+    });
+  </script>
+
+</body>
+</html>

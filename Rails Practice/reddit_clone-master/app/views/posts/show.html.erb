@@ -1,0 +1,16 @@
+<% post_url = @post.url || "#" %>
+<h2><a href="<%= post_url %>"><%= @post.title %></a></h2>
+<h4>submitted by <%= @post.author.user_name %></h4>
+
+<a href="<%= new_post_comment_url(@post) %>">Add a New Comment</a>
+<% @comments[nil].each do |comment| %>
+  <%= render "comments/comment", comment: comment, all_comments: @comments %>
+  <form action="upvote_post_url" method="post">
+    <%= auth_token %>
+    <input type="submit" value="▲">
+  </form>
+  <form action="downvote_post_url" method="post">
+    <%= auth_token %>
+    <input type="submit" value="▼">
+  </form>
+<% end %>

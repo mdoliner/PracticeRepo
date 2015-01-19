@@ -1,0 +1,25 @@
+<p>
+  Posted by: <%= comment.author.user_name %>
+  <br>
+  <%= comment.content %>
+  <br>
+  <a href="<%= comment_url(comment) %>">Click to show comment</a>
+</p>
+
+<% unless comment.children_comments.empty? %>
+  <ul>
+    <% all_comments[comment.id].each do |child| %>
+      <li>
+        <%= render "comments/comment", comment: child, all_comments: all_comments %>
+        <form action="upvote_comment_url" method="post">
+          <%= auth_token %>
+          <input type="submit" value="▲">
+        </form>
+        <form action="downvote_comment_url" method="post">
+          <%= auth_token %>
+          <input type="submit" value="▼">
+        </form>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

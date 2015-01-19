@@ -1,0 +1,10 @@
+<h1>Subs</h1>
+
+<% Sub.all.each do |sub| %>
+  <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+  <br>
+<% end %>
+
+<form action="<%= new_sub_url %>" method="get">
+  <input type="submit" value="Create Sub">
+</form>

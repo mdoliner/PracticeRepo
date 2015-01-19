@@ -1,0 +1,54 @@
+/* PHASE 10: Posts */
+span.post {
+ border-top: 1px solid #ccc;
+ padding: 20px 0;
+ display: block;
+}
+
+span.post a {
+  display: block;
+  float: left;
+}
+
+span.post span.content {
+  display: block;
+  float: left;
+  width: 530px;
+  margin-left: 10px;
+}
+
+span.post h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+span.post p {
+  padding: 20px 0;
+}
+
+span.post ul.post-info {
+  float: left;
+  color: #aaa;
+  font-size: 14px;
+}
+
+span.post ul.post-info li {
+  float: left;
+}
+
+span.post ul.post-info li + li:before {
+  content: "·";
+  padding: 0px 5px;
+}
+
+span.post ul.options {
+  float: right;
+}
+
+span.post ul.options li {
+  float: left;
+}
+
+span.post ul.options li + li {
+  margin-left: 10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Towers of Hanoi</title>
+  <link rel="stylesheet" type="text/css" href="../css/hanoi.css">
+</head>
+<body>
+<script src="../js/jquery-2.1.1.js"></script>
+<!-- Whackjobs at GithubPages don't understand symlinks... -->
+<script src="../js/hanoi-core.js"></script>
+<script src="../js/hanoi-view.js"></script>
+
+<ul class="hanoi">
+  <ul class="tower-0"></ul>
+  <ul class="tower-1"></ul>
+  <ul class="tower-2"></ul>
+
+</ul>
+
+<script>
+$(function () {
+  var $hanoi = $(".hanoi");
+  var game = new Hanoi.Game();
+  var view = new Hanoi.View(game, $hanoi);
+  $tower0 = $(".tower-0");
+  $tower1 = $(".tower-1");
+  $tower2 = $(".tower-2");
+  $tower0.data("val", 0);
+  $tower1.data("val", 1);
+  $tower2.data("val", 2);
+  $tower0.on("click", function () {
+    view.clickTower($tower0);
+  });
+  $tower1.on("click", function () {
+    view.clickTower($tower1);
+  });
+  $tower2.on("click", function () {
+    view.clickTower($tower2);
+  });
+});
+</script>
+</body>
+</html>

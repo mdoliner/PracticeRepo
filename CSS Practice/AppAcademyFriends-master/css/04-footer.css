@@ -1,0 +1,28 @@
+/* PHASE 4: Footer */
+nav.footer {
+  font-size: 14px;
+  background: #fff;
+  color: #aaa;
+  border-bottom: 1px solid #ccc;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+nav.footer small {
+  float: left;
+  padding: 20px 20px;
+}
+
+nav.footer ul {
+  float: right;
+  padding-right: 10px;
+}
+
+nav.footer ul li {
+  float: left;
+  padding: 20px 10px;
+}
+
+nav.footer ul li a:hover {
+  color: #000;
+}

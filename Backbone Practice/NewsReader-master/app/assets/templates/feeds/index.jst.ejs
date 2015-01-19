@@ -1,0 +1,8 @@
+<h3 class="title-bar">Feeds</h3>
+<ul>
+  <% collection.each (function (feed) {%>
+    <li><a href="#feeds/<%= feed.id %>"><%= feed.escape("title")
+    %></a><button data-id="<%= feed.id %>" class="delete"> </button></li>
+  <% }); %>
+</ul>
+<a class="new-feed" href="#feeds/new">Add New Feed</a>
